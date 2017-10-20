@@ -1,20 +1,18 @@
-
 package projeto.pkg2017;
+import java.util.*;
 public class Bar extends Locais{
-    int lotaçao;
-    int inscritos;
+    int lotacao;
+    ArrayList<Pessoa> inscritos;
     int entrada;
-    public int retLotaçao(){
-        return this.lotaçao;
+    public Bar(String nome, int[] coordenadas, int lotacao, int entrada){
+      super(nome, coordenadas);
+      this.lotacao = lotacao;
+      this.entrada = entrada;
     }
-    public int retEntrada(){
-        return this.entrada;
+    public void addPessoa(Pessoa a){
+      inscritos.add(a);
     }
-    public int retInscritos(){
-        return this.inscritos;
-    }
-    @Override
     public String toString(){
-        return "Nome bar: "+nome+"Lotação max: "+lotaçao+"Custo"+entrada+"Localização: "+coordenadas;
+        return "Nome bar: "+nome+"Lotacao max: "+lotacao+"Custo"+entrada+"Localizacao: "+coordenadas;
     }
 }

@@ -1,21 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package projeto.pkg2017;
-
-/**
- *
- * @author João Oliveira
- */
+import java.util.*;
 public class Professor extends Pessoa{
-    String tipo;
-    public String retTipo(){
-        return this.tipo;
+    String curso;
+    public Professor(String nome,  String perfil,String curso){
+        super(nome, perfil);
+        this.curso = curso;
     }
-    @Override
     public String toString(){
-        return "Professor"+tipo+nome+"com perfil"+perfil;
+        return String.format("Aluno: %s %s %s" ,nome,curso,perfil);
     }
 }
